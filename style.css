@@ -1,0 +1,252 @@
+:root {
+  --bg: #0b1120;
+  --surface: #162033;
+  --surface-light: #24324d;
+  --primary: #a855f7;
+  --primary-hover: #9333ea;
+  --accent: #38bdf8;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #2a3954;
+  --code-bg: #060a14;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topbar {
+  background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+  margin-bottom: 28px;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(168, 85, 247, 0.18);
+  color: #d8b4fe;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+}
+
+.topbar p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.btn-outline {
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: #d8b4fe;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.card h3 {
+  font-size: 1.08rem;
+}
+
+.mode-bar {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.mode-bar label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+input[type="password"], textarea {
+  width: 100%;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+input[type="password"]:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.preset-btn {
+  background: var(--surface-light);
+  color: var(--text);
+  border: 1px solid transparent;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.preset-btn:hover {
+  border-color: var(--primary);
+  color: #e9d5ff;
+}
+
+.btn-primary {
+  margin-top: 14px;
+  width: 100%;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.output-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.btn-small {
+  background: var(--surface-light);
+  color: var(--text);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.result-box {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: #e2e8f0;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-list li {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.reply-box, .prompt-preview {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+.prompt-preview {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .output-grid {
+    grid-template-columns: 1fr;
+  }
+}
