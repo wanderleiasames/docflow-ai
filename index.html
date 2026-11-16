@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocFlow AI | AI Builder Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <span class="badge">AI BUILDER • PRODUTIVIDADE &amp; NEGÓCIOS</span>
+        <h1>DocFlow AI</h1>
+        <p>Organizador Inteligente de Textos, Planos de Ação e Comunicações com LLMs</p>
+      </div>
+      <a href="https://github.com/wanderleiasames/docflow-ai" target="_blank" class="btn-outline">Ver Código no GitHub</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card input-section">
+      <div class="mode-bar">
+        <label for="apiKey">🔑 Chave API Google Gemini (Opcional — deixe vazio para usar o Modo Demo Instantâneo):</label>
+        <input type="password" id="apiKey" placeholder="Cole sua Gemini API Key aqui se quiser processar textos livres ao vivo...">
+      </div>
+
+      <label for="rawText"><strong>1. Escolha um cenário de negócio pronto ou cole qualquer texto/e-mail abaixo:</strong></label>
+      <div class="presets">
+        <button type="button" class="preset-btn" data-preset="cliente">📩 E-mail Urgente de Cliente (E-commerce)</button>
+        <button type="button" class="preset-btn" data-preset="reuniao">📋 Ata de Reunião de Operações</button>
+        <button type="button" class="preset-btn" data-preset="projeto">🎓 Planejamento de Projeto Educacional</button>
+      </div>
+
+      <textarea id="rawText" rows="5" placeholder="Cole aqui um e-mail longo, mensagem de cliente ou anotações de reunião para estruturar..."></textarea>
+
+      <button id="processBtn" class="btn-primary">✨ Estruturar Resumo, Tarefas e Resposta</button>
+    </section>
+
+    <section id="outputSection" class="output-grid hidden">
+      <div class="card">
+        <div class="card-header">
+          <h3>📌 Resumo Executivo</h3>
+          <button type="button" class="btn-small copy-btn" data-target="summaryOutput">Copiar</button>
+        </div>
+        <div id="summaryOutput" class="result-box"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>✅ Plano de Ação Priorizado</h3>
+          <button type="button" class="btn-small copy-btn" data-target="tasksOutput">Copiar</button>
+        </div>
+        <ul id="tasksOutput" class="task-list"></ul>
+      </div>
+
+      <div class="card full-width">
+        <div class="card-header">
+          <h3>✉️ Rascunho de Resposta Profissional</h3>
+          <button type="button" class="btn-small copy-btn" data-target="replyOutput">Copiar Resposta</button>
+        </div>
+        <pre class="reply-box"><code id="replyOutput"></code></pre>
+      </div>
+
+      <div class="card full-width">
+        <h3>🧠 Engenharia de Prompt Aplicada (System Instructions)</h3>
+        <pre class="prompt-preview"><code id="promptOutput"></code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por <strong>Wanderléia dos Santos</strong> • Portfólio AI Builder &amp; Soluções Digitais</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
