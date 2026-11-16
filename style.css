@@ -1,14 +1,14 @@
 :root {
-  --bg: #0b1120;
-  --surface: #162033;
-  --surface-light: #24324d;
-  --primary: #a855f7;
-  --primary-hover: #9333ea;
-  --accent: #38bdf8;
-  --text: #f8fafc;
+  --bg: #06131c;
+  --surface: #0d212e;
+  --surface-light: #163447;
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --accent: #0ea5e9;
+  --text: #f0f9ff;
   --text-muted: #94a3b8;
-  --border: #2a3954;
-  --code-bg: #060a14;
+  --border: #1e3f52;
+  --code-bg: #030a0f;
 }
 
 * {
@@ -31,7 +31,7 @@ body {
 }
 
 .topbar {
-  background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 100%);
+  background: linear-gradient(135deg, #06131c 0%, #0b2d39 55%, #06373a 100%);
   border-bottom: 1px solid var(--border);
   padding: 28px 0;
   margin-bottom: 28px;
@@ -47,19 +47,23 @@ body {
 
 .badge {
   display: inline-block;
-  background: rgba(168, 85, 247, 0.18);
-  color: #d8b4fe;
+  background: rgba(16, 185, 129, 0.16);
+  color: #34d399;
+  border: 1px solid rgba(14, 165, 233, 0.3);
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 999px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
 }
 
 h1 {
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .topbar p {
@@ -78,8 +82,8 @@ h1 {
 }
 
 .btn-outline:hover {
-  border-color: var(--primary);
-  color: #d8b4fe;
+  border-color: var(--accent);
+  color: #38bdf8;
 }
 
 .card {
@@ -92,6 +96,7 @@ h1 {
 
 .card h3 {
   font-size: 1.08rem;
+  color: #e0f2fe;
 }
 
 .mode-bar {
@@ -119,7 +124,7 @@ input[type="password"], textarea {
 
 input[type="password"]:focus, textarea:focus {
   outline: none;
-  border-color: var(--primary);
+  border-color: var(--accent);
 }
 
 .presets {
@@ -142,13 +147,13 @@ input[type="password"]:focus, textarea:focus {
 
 .preset-btn:hover {
   border-color: var(--primary);
-  color: #e9d5ff;
+  color: #6ee7b7;
 }
 
 .btn-primary {
   margin-top: 14px;
   width: 100%;
-  background: var(--primary);
+  background: linear-gradient(90deg, #0284c7, #10b981);
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
@@ -160,7 +165,7 @@ input[type="password"]:focus, textarea:focus {
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  filter: brightness(1.1);
 }
 
 .output-grid {
